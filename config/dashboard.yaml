@@ -1,0 +1,33 @@
+title: EG4 Battery System Dashboard
+views:
+  - path: eg4_dashboard
+    title: EG4 Battery System
+    badges: []
+    cards:
+      - type: entities
+        title: Battery Status
+        entities:
+          - entity: sensor.battery_status
+          - entity: sensor.charge_level
+          - entity: sensor.inverter_performance
+      - type: entities
+        title: Alerts and Notifications
+        entities:
+          - entity: binary_sensor.alert_status
+          - entity: switch.notifications_enabled
+          - entity: switch.alerts_enabled
+      - type: gauge
+        entity: sensor.charge_level
+        name: Charge Level
+        min: 0
+        max: 100
+        severity:
+          green: 70
+          yellow: 30
+          red: 0
+      - type: history-graph
+        entities:
+          - sensor.battery_status
+          - sensor.charge_level
+        hours_to_show: 24
+        refresh_interval: 60

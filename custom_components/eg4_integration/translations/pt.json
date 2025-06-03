@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Configure sua integração EG4. Para ajuda, visite: https://github.com/n2aws/hacs-eg4-integration",
+                "data": {
+                    "username": "Nome de usuário",
+                    "password": "Senha",
+                    "inverter_model": "Modelo do inversor",
+                    "battery_model": "Modelo da bateria",
+                    "inverter_serial_number": "Número de série do inversor",
+                    "gridboss_serial_number": "Número de série do GridBoss",
+                    "polling_interval": "Intervalo de sondagem (segundos)"
+                }
+            }
+        },
+        "error": {
+            "auth": "Nome de usuário ou senha inválidos.",
+            "connection": "Não foi possível conectar ao hardware EG4.",
+            "unknown": "Ocorreu um erro desconhecido.",
+            "modbus": "Erro ao ler os dados do Modbus."
+        },
+        "abort": {
+            "already_configured": "Este hardware já está configurado."
+        }
+    }
+}

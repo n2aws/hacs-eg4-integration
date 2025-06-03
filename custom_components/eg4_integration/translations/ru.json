@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Настройте интеграцию EG4. Для получения помощи посетите: https://github.com/n2aws/hacs-eg4-integration",
+                "data": {
+                    "username": "Имя пользователя",
+                    "password": "Пароль",
+                    "inverter_model": "Модель инвертора",
+                    "battery_model": "Модель батареи",
+                    "inverter_serial_number": "Серийный номер инвертора",
+                    "gridboss_serial_number": "Серийный номер GridBoss",
+                    "polling_interval": "Интервал опроса (секунды)"
+                }
+            }
+        },
+        "error": {
+            "auth": "Неверное имя пользователя или пароль.",
+            "connection": "Не удалось подключиться к оборудованию EG4.",
+            "unknown": "Произошла неизвестная ошибка.",
+            "modbus": "Ошибка чтения данных Modbus."
+        },
+        "abort": {
+            "already_configured": "Это оборудование уже настроено."
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "EG4統合を設定します。ヘルプが必要な場合は、https://github.com/n2aws/hacs-eg4-integrationをご覧ください",
+                "data": {
+                    "username": "ユーザー名",
+                    "password": "パスワード",
+                    "inverter_model": "インバータモデル",
+                    "battery_model": "バッテリーモデル",
+                    "inverter_serial_number": "インバータシリアル番号",
+                    "gridboss_serial_number": "GridBossシリアル番号",
+                    "polling_interval": "ポーリング間隔（秒）"
+                }
+            }
+        },
+        "error": {
+            "auth": "ユーザー名またはパスワードが無効です。",
+            "connection": "EG4ハードウェアに接続できません。",
+            "unknown": "不明なエラーが発生しました。",
+            "modbus": "Modbusデータの読み取りエラー。"
+        },
+        "abort": {
+            "already_configured": "このハードウェアはすでに構成されています。"
+        }
+    }
+}

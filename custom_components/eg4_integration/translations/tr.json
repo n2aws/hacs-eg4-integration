@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "EG4 Entegrasyonunuzu yapılandırın. Yardım için şu adresi ziyaret edin: https://github.com/n2aws/hacs-eg4-integration",
+                "data": {
+                    "username": "Kullanıcı adı",
+                    "password": "Şifre",
+                    "inverter_model": "İnvertör Modeli",
+                    "battery_model": "Batarya Modeli",
+                    "inverter_serial_number": "İnvertör Seri Numarası",
+                    "gridboss_serial_number": "GridBoss Seri Numarası",
+                    "polling_interval": "Anket Aralığı (saniye)"
+                }
+            }
+        },
+        "error": {
+            "auth": "Geçersiz kullanıcı adı veya şifre.",
+            "connection": "EG4 donanımına bağlanılamıyor.",
+            "unknown": "Bilinmeyen bir hata oluştu.",
+            "modbus": "Modbus verilerini okurken hata oluştu."
+        },
+        "abort": {
+            "already_configured": "Bu donanım zaten yapılandırılmış."
+        }
+    }
+}

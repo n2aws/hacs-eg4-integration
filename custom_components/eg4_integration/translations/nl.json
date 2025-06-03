@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Configureer uw EG4-integratie. Voor hulp, bezoek: https://github.com/n2aws/hacs-eg4-integration",
+                "data": {
+                    "username": "Gebruikersnaam",
+                    "password": "Wachtwoord",
+                    "inverter_model": "Omvormermodel",
+                    "battery_model": "Batterijmodel",
+                    "inverter_serial_number": "Serienummer van de omvormer",
+                    "gridboss_serial_number": "Serienummer van GridBoss",
+                    "polling_interval": "Polling-interval (seconden)"
+                }
+            }
+        },
+        "error": {
+            "auth": "Ongeldige gebruikersnaam of wachtwoord.",
+            "connection": "Kan geen verbinding maken met de EG4-hardware.",
+            "unknown": "Er is een onbekende fout opgetreden.",
+            "modbus": "Fout bij het lezen van Modbus-gegevens."
+        },
+        "abort": {
+            "already_configured": "Deze hardware is al geconfigureerd."
+        }
+    }
+}

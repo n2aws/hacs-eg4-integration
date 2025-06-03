@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "قم بتكوين تكامل EG4 الخاص بك. للحصول على المساعدة، قم بزيارة: https://github.com/n2aws/hacs-eg4-integration",
+                "data": {
+                    "username": "اسم المستخدم",
+                    "password": "كلمة المرور",
+                    "inverter_model": "طراز العاكس",
+                    "battery_model": "طراز البطارية",
+                    "inverter_serial_number": "الرقم التسلسلي للعاكس",
+                    "gridboss_serial_number": "الرقم التسلسلي لـ GridBoss",
+                    "polling_interval": "فاصل الاستطلاع (بالثواني)"
+                }
+            }
+        },
+        "error": {
+            "auth": "اسم المستخدم أو كلمة المرور غير صحيحة.",
+            "connection": "تعذر الاتصال بمعدات EG4.",
+            "unknown": "حدث خطأ غير معروف.",
+            "modbus": "خطأ في قراءة بيانات Modbus."
+        },
+        "abort": {
+            "already_configured": "تم تكوين هذه المعدات بالفعل."
+        }
+    }
+}

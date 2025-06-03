@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "अपने EG4 एकीकरण को कॉन्फ़िगर करें। सहायता के लिए, देखें: https://github.com/n2aws/hacs-eg4-integration",
+                "data": {
+                    "username": "उपयोगकर्ता नाम",
+                    "password": "पासवर्ड",
+                    "inverter_model": "इन्वर्टर मॉडल",
+                    "battery_model": "बैटरी मॉडल",
+                    "inverter_serial_number": "इन्वर्टर सीरियल नंबर",
+                    "gridboss_serial_number": "GridBoss सीरियल नंबर",
+                    "polling_interval": "पोलिंग अंतराल (सेकंड)"
+                }
+            }
+        },
+        "error": {
+            "auth": "अमान्य उपयोगकर्ता नाम या पासवर्ड।",
+            "connection": "EG4 हार्डवेयर से कनेक्ट करने में असमर्थ।",
+            "unknown": "एक अज्ञात त्रुटि हुई।",
+            "modbus": "Modbus डेटा पढ़ने में त्रुटि।"
+        },
+        "abort": {
+            "already_configured": "यह हार्डवेयर पहले से ही कॉन्फ़िगर किया गया है।"
+        }
+    }
+}

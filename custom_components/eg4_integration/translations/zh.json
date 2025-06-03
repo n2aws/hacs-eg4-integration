@@ -1,0 +1,27 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "配置您的EG4集成。如需帮助，请访问：https://github.com/n2aws/hacs-eg4-integration",
+                "data": {
+                    "username": "用户名",
+                    "password": "密码",
+                    "inverter_model": "逆变器型号",
+                    "battery_model": "电池型号",
+                    "inverter_serial_number": "逆变器序列号",
+                    "gridboss_serial_number": "GridBoss序列号",
+                    "polling_interval": "轮询间隔（秒）"
+                }
+            }
+        },
+        "error": {
+            "auth": "用户名或密码无效。",
+            "connection": "无法连接到EG4硬件。",
+            "unknown": "发生未知错误。",
+            "modbus": "读取Modbus数据时出错。"
+        },
+        "abort": {
+            "already_configured": "此硬件已配置。"
+        }
+    }
+}

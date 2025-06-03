@@ -1,0 +1,28 @@
+{
+  "domain": "EG4",
+  "name": "EG4 Integration",
+  "codeowners": [
+    "@n2aws"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/n2aws/hacs-eg4-integration",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/n2aws/hacs-eg4-integration/issues",
+  "version": "0.1.0",
+  "translations": {
+    "en": "translations/en.json",
+    "es": "translations/es.json",
+    "zh": "translations/zh.json",
+    "ja": "translations/ja.json",
+    "fr": "translations/fr.json",
+    "de": "translations/de.json",
+    "it": "translations/it.json",
+    "ru": "translations/ru.json",
+    "ar": "translations/ar.json",
+    "pt": "translations/pt.json",
+    "ko": "translations/ko.json",
+    "hi": "translations/hi.json",
+    "tr": "translations/tr.json",
+    "nl": "translations/nl.json"
+  }
+}
