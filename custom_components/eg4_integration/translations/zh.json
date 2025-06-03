@@ -19,7 +19,8 @@
             "connection": "无法连接到EG4硬件。",
             "unknown": "发生未知错误。",
             "modbus": "读取Modbus数据时出错。",
-            "auto_discover_ip": "自动发现IP地址失败。"
+            "auto_discover_ip": "自动发现IP地址失败。",
+            "polling_interval": "TCP的轮询间隔至少为5秒，串行的轮询间隔至少为1秒。"
         },
         "abort": {
             "already_configured": "此硬件已配置。"

@@ -10,7 +10,7 @@
                     "battery_model": "طراز البطارية",
                     "inverter_serial_number": "الرقم التسلسلي للعاكس",
                     "gridboss_serial_number": "الرقم التسلسلي لـ GridBoss",
-                    "polling_interval": "فاصل الاستطلاع (بالثواني)"
+                    "polling_interval": "فترة الاستطلاع (بالثواني)"
                 }
             }
         },
@@ -19,7 +19,8 @@
             "connection": "تعذر الاتصال بمعدات EG4.",
             "unknown": "حدث خطأ غير معروف.",
             "modbus": "خطأ في قراءة بيانات Modbus.",
-            "auto_discover_ip": "فشل اكتشاف عنوان IP تلقائيًا."
+            "auto_discover_ip": "فشل اكتشاف عنوان IP تلقائيًا.",
+            "polling_interval": "يجب أن تكون فترة الاستطلاع 5 ثوانٍ على الأقل لـ TCP و 1 ثانية للتسلسل."
         },
         "abort": {
             "already_configured": "تم تكوين هذه المعدات بالفعل."

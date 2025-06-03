@@ -19,7 +19,8 @@
             "connection": "Impossible de se connecter au matériel EG4.",
             "unknown": "Une erreur inconnue s'est produite.",
             "modbus": "Erreur de lecture des données Modbus.",
-            "auto_discover_ip": "Échec de la découverte de l'adresse IP."
+            "auto_discover_ip": "Échec de la découverte de l'adresse IP.",
+            "polling_interval": "L'intervalle de sondage doit être d'au moins 5 secondes pour TCP et 1 seconde pour le port série."
         },
         "abort": {
             "already_configured": "Ce matériel est déjà configuré."

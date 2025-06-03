@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 from datetime import timedelta
+import asyncio
 
 from homeassistant.exceptions import ConfigEntryAuthFailed
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
@@ -61,20 +62,15 @@ class EG4IntegrationDataUpdateCoordinator(DataUpdateCoordinator):
 class EG4DataUpdateCoordinator(DataUpdateCoordinator):
     """Class to manage fetching data from the EG4 hardware."""
 
-    def __init__(self, hass, config_entry):
+    def __init__(self, hass, api_client, polling_interval):
         super().__init__(
             hass,
             LOGGER,
             name="EG4 Integration",
-            update_interval=timedelta(seconds=config_entry.data.get("polling_interval", 30)),
+            update_interval=timedelta(seconds=polling_interval),
         )
-        self.api_client = EG4ApiClient(
-            host=config_entry.data.get("host"),
-            port=config_entry.data.get("port"),
-            serial_port=config_entry.data.get("serial_port"),
-            baudrate=config_entry.data.get("baudrate", 9600),
-            serial_number=config_entry.data.get("inverter_serial_number"),
-        )
+        self.api_client = api_client
+        self.polling_interval = max(polling_interval, 5 if api_client.connection_type == "TCP" else 1)
 
     async def _async_update_data(self):
         """Fetch data from the Modbus registers."""
@@ -94,6 +90,7 @@ class EG4DataUpdateCoordinator(DataUpdateCoordinator):
                 data.update(gridboss_data)
 
             await self.api_client.close()
+            await asyncio.sleep(self.polling_interval)
             return data
         except Exception as error:
             raise UpdateFailed(f"Error fetching data: {error}")

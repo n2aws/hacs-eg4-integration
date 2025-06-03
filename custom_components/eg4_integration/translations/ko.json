@@ -10,7 +10,7 @@
                     "battery_model": "배터리 모델",
                     "inverter_serial_number": "인버터 시리얼 번호",
                     "gridboss_serial_number": "GridBoss 시리얼 번호",
-                    "polling_interval": "폴링 간격(초)"
+                    "polling_interval": "폴링 간격 (초)"
                 }
             }
         },
@@ -19,7 +19,8 @@
             "connection": "EG4 하드웨어에 연결할 수 없습니다.",
             "unknown": "알 수 없는 오류가 발생했습니다.",
             "modbus": "Modbus 데이터를 읽는 중 오류가 발생했습니다.",
-            "auto_discover_ip": "IP 주소 자동 검색 실패."
+            "auto_discover_ip": "IP 주소 자동 검색 실패.",
+            "polling_interval": "TCP의 폴링 간격은 최소 5초, 시리얼의 폴링 간격은 최소 1초여야 합니다."
         },
         "abort": {
             "already_configured": "이 하드웨어는 이미 구성되어 있습니다."

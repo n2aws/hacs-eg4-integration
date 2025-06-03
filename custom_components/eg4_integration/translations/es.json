@@ -22,7 +22,8 @@
             "auto_discover_ip": {
                 "error": "Error al descubrir la dirección IP.",
                 "success": "Dirección IP descubierta con éxito."
-            }
+            },
+            "polling_interval": "El intervalo de sondeo debe ser al menos de 5 segundos para TCP y 1 segundo para serial."
         },
         "abort": {
             "already_configured": "Este hardware ya está configurado."

@@ -22,7 +22,8 @@
             "auto_discover_ip": {
                 "error": "IPアドレスの自動検出に失敗しました。",
                 "success": "IPアドレスを正常に検出しました。"
-            }
+            },
+            "polling_interval": "TCPのポーリング間隔は最低5秒、シリアルのポーリング間隔は最低1秒である必要があります。"
         },
         "abort": {
             "already_configured": "このハードウェアはすでに構成されています。"

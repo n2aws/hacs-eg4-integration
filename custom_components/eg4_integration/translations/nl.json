@@ -19,7 +19,8 @@
             "connection": "Kan geen verbinding maken met de EG4-hardware.",
             "unknown": "Er is een onbekende fout opgetreden.",
             "modbus": "Fout bij het lezen van Modbus-gegevens.",
-            "auto_discover_ip": "IP-adres automatisch ontdekken mislukt."
+            "auto_discover_ip": "IP-adres automatisch ontdekken mislukt.",
+            "polling_interval": "Het polling-interval moet minimaal 5 seconden zijn voor TCP en 1 seconde voor serieel."
         },
         "abort": {
             "already_configured": "Deze hardware is al geconfigureerd."

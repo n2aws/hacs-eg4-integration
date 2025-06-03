@@ -95,21 +95,21 @@ class EG4FlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             # Validate user input here
             return self.async_create_entry(title="EG4 Integration", data=user_input)
 
+        data_schema = vol.Schema({
+            vol.Required("inverter_model"): selector({"select": {"options": [
+                "flexboss21", "flexboss18", "18kpv", "12kpv", "12000xp", "6000xp", "3000ehv", "gridboss"
+            ]}}),
+            vol.Required("battery_model"): selector({"select": {"options": [
+                "wallmount indoor 100ah", "wallmount all weather", "wallmount indoor 280ah", "LL-S 48V 100ah", "LL 24V 200ah", "LL 12V 400ah", "lifepower4 48V v2", "lifepower4 24V v2"
+            ]}}),
+            vol.Required("inverter_serial_number"): selector({"text": {"multiline": False}}),
+            vol.Optional("gridboss_serial_number"): selector({"text": {"multiline": False}}),
+            vol.Optional("polling_interval", default=30): selector({"number": {"min": 10, "max": 3600, "step": 10}}),
+        })
+
         return self.async_show_form(
             step_id="user",
-            data_schema=vol.Schema(
-                {
-                    vol.Required("inverter_model"): selector({"select": {"options": [
-                        "flexboss21", "flexboss18", "18kpv", "12kpv", "12000xp", "6000xp", "3000ehv", "gridboss"
-                    ]}}),
-                    vol.Required("battery_model"): selector({"select": {"options": [
-                        "wallmount indoor 100ah", "wallmount all weather", "wallmount indoor 280ah", "LL-S 48V 100ah", "LL 24V 200ah", "LL 12V 400ah", "lifepower4 48V v2", "lifepower4 24V v2"
-                    ]}}),
-                    vol.Required("inverter_serial_number"): selector({"text": {"multiline": False}}),
-                    vol.Optional("gridboss_serial_number"): selector({"text": {"multiline": False}}),
-                    vol.Optional("polling_interval", default=30): selector({"number": {"min": 10, "max": 3600, "step": 10}}),
-                }
-            ),
+            data_schema=data_schema,
             errors=errors,
             description_placeholders={
                 "description": "Configure your EG4 Integration. For help, visit: https://github.com/n2aws/hacs-eg4-integration"

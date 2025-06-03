@@ -19,7 +19,8 @@
             "connection": "EG4 donanımına bağlanılamıyor.",
             "unknown": "Bilinmeyen bir hata oluştu.",
             "modbus": "Modbus verilerini okurken hata oluştu.",
-            "auto_discover_ip": "IP adresi otomatik olarak keşfedilemedi."
+            "auto_discover_ip": "IP adresi otomatik olarak keşfedilemedi.",
+            "polling_interval": "TCP için anket aralığı en az 5 saniye ve seri için en az 1 saniye olmalıdır."
         },
         "abort": {
             "already_configured": "Bu donanım zaten yapılandırılmış."

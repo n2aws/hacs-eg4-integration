@@ -19,7 +19,8 @@
             "connection": "Verbindung zum EG4-Hardware nicht möglich.",
             "unknown": "Ein unbekannter Fehler ist aufgetreten.",
             "modbus": "Fehler beim Lesen der Modbus-Daten.",
-            "auto_discover_ip": "Fehler beim automatischen Erkennen der IP-Adresse."
+            "auto_discover_ip": "Fehler beim automatischen Erkennen der IP-Adresse.",
+            "polling_interval": "Das Abfrageintervall muss mindestens 5 Sekunden für TCP und 1 Sekunde für seriell betragen."
         },
         "abort": {
             "already_configured": "Diese Hardware ist bereits konfiguriert."
