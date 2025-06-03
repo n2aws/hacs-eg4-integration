@@ -15,18 +15,17 @@
             }
         },
         "error": {
-            "auth": "ユーザー名またはパスワードが無効です。",
             "connection": "EG4ハードウェアに接続できません。",
             "unknown": "不明なエラーが発生しました。",
-            "modbus": "Modbusデータの読み取りエラー。",
-            "auto_discover_ip": {
-                "error": "IPアドレスの自動検出に失敗しました。",
-                "success": "IPアドレスを正常に検出しました。"
-            },
+            "modbus": "Modbusデータの読み取り中にエラーが発生しました。",
+            "auto_discover_ip": "IPアドレスの自動検出に失敗しました。",
             "polling_interval": "TCPのポーリング間隔は最低5秒、シリアルのポーリング間隔は最低1秒である必要があります。"
         },
         "abort": {
             "already_configured": "このハードウェアはすでに構成されています。"
+        },
+        "success": {
+            "auto_discover_ip": "IPアドレスを正常に検出しました。"
         }
     }
 }

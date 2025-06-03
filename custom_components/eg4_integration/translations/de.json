@@ -15,8 +15,7 @@
             }
         },
         "error": {
-            "auth": "Ungültiger Benutzername oder Passwort.",
-            "connection": "Verbindung zum EG4-Hardware nicht möglich.",
+            "connection": "Verbindung zum EG4-Hardware konnte nicht hergestellt werden.",
             "unknown": "Ein unbekannter Fehler ist aufgetreten.",
             "modbus": "Fehler beim Lesen der Modbus-Daten.",
             "auto_discover_ip": "Fehler beim automatischen Erkennen der IP-Adresse.",

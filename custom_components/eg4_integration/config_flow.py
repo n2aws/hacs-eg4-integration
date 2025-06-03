@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import voluptuous as vol
 from homeassistant import config_entries
-from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
 from homeassistant.helpers import selector
 from homeassistant.helpers.aiohttp_client import async_create_clientsession
 from slugify import slugify
@@ -104,7 +103,10 @@ class EG4FlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             ]}}),
             vol.Required("inverter_serial_number"): selector({"text": {"multiline": False}}),
             vol.Optional("gridboss_serial_number"): selector({"text": {"multiline": False}}),
-            vol.Optional("polling_interval", default=30): selector({"number": {"min": 10, "max": 3600, "step": 10}}),
+            vol.Required("polling_interval", default=10): vol.All(
+                vol.Coerce(int),
+                vol.Range(min=5) if self.connection_type == "TCP" else vol.Range(min=1)
+            ),
         })
 
         return self.async_show_form(

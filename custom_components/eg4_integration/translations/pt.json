@@ -15,7 +15,6 @@
             }
         },
         "error": {
-            "auth": "Nome de usuário ou senha inválidos.",
             "connection": "Não foi possível conectar ao hardware EG4.",
             "unknown": "Ocorreu um erro desconhecido.",
             "modbus": "Erro ao ler os dados do Modbus.",

@@ -15,7 +15,6 @@
             }
         },
         "error": {
-            "auth": "用户名或密码无效。",
             "connection": "无法连接到EG4硬件。",
             "unknown": "发生未知错误。",
             "modbus": "读取Modbus数据时出错。",

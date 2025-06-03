@@ -15,7 +15,6 @@
             }
         },
         "error": {
-            "auth": "Ongeldige gebruikersnaam of wachtwoord.",
             "connection": "Kan geen verbinding maken met de EG4-hardware.",
             "unknown": "Er is een onbekende fout opgetreden.",
             "modbus": "Fout bij het lezen van Modbus-gegevens.",

@@ -15,7 +15,6 @@
             }
         },
         "error": {
-            "auth": "Geçersiz kullanıcı adı veya şifre.",
             "connection": "EG4 donanımına bağlanılamıyor.",
             "unknown": "Bilinmeyen bir hata oluştu.",
             "modbus": "Modbus verilerini okurken hata oluştu.",

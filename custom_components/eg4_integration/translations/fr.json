@@ -15,7 +15,6 @@
             }
         },
         "error": {
-            "auth": "Nom d'utilisateur ou mot de passe invalide.",
             "connection": "Impossible de se connecter au matériel EG4.",
             "unknown": "Une erreur inconnue s'est produite.",
             "modbus": "Erreur de lecture des données Modbus.",
