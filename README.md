@@ -10,13 +10,43 @@ The EG4 Integration is a Home Assistant custom component designed to monitor and
 - Alerts and notifications based on system performance.
 - Dashboard visualization using YAML configuration.
 
-## Installation
-1. Clone this repository into your Home Assistant `custom_components` directory:
-   ```bash
-   git clone https://github.com/n2aws/hacs-eg4-integration.git custom_components/eg4_integration
-   ```
-2. Restart Home Assistant.
-3. Add the integration via the Home Assistant UI.
+## Installation via HACS
+
+To install the EG4 Integration using HACS (Home Assistant Community Store), follow these steps:
+
+1. **Ensure HACS is Installed**:
+   - If you haven't installed HACS yet, visit [HACS Installation Guide](https://hacs.xyz/docs/setup/prerequisites) and follow the instructions.
+
+2. **Add the Custom Repository**:
+   - Open Home Assistant.
+   - Navigate to **HACS** > **Integrations**.
+   - Click the three dots in the top-right corner and select **Custom Repositories**.
+   - Enter the following repository URL: `https://github.com/n2aws/hacs-eg4-integration`.
+   - Set the category to **Integration**.
+
+3. **Install the Integration**:
+   - After adding the custom repository, search for "EG4 Integration" in the HACS Integrations section.
+   - Click **Install**.
+
+4. **Restart Home Assistant**:
+   - Once the installation is complete, restart Home Assistant to load the integration.
+
+5. **Configure the Integration**:
+   - Navigate to **Settings** > **Devices & Services**.
+   - Click **Add Integration** and search for "EG4 Integration".
+   - Follow the configuration steps to set up your EG4 hardware.
+
+6. **Import the Dashboard**:
+   - Navigate to **Settings** > **Dashboards** in Home Assistant.
+   - Click **Create Dashboard** and provide a name for the dashboard (e.g., "EG4 Battery System").
+   - Click **Take Control** to enable manual configuration.
+   - Open the `config/dashboard.yaml` file from the repository.
+   - Copy the contents of the `dashboard.yaml` file.
+   - Paste the copied YAML into the dashboard editor in Home Assistant.
+   - Click **Save** to apply the changes.
+   - Navigate to the newly created dashboard to view battery status, charge levels, inverter performance, alerts, and notifications.
+
+For additional help, visit the [GitHub Repository](https://github.com/n2aws/hacs-eg4-integration).
 
 ## Configuration
 1. Navigate to the Home Assistant Integrations page.

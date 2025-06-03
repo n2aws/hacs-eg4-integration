@@ -22,7 +22,7 @@ class EG4FlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 
     VERSION = 1
 
-    async def async_step_user(
+    async def async_step_setup(
         self,
         user_input: dict | None = None,
     ) -> config_entries.ConfigFlowResult:
@@ -57,21 +57,24 @@ class EG4FlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                 )
 
         return self.async_show_form(
-            step_id="user",
+            step_id="setup",
             data_schema=vol.Schema(
                 {
-                    vol.Required(
-                        CONF_USERNAME,
-                        default=(user_input or {}).get(CONF_USERNAME, vol.UNDEFINED),
-                    ): selector.TextSelector(
-                        selector.TextSelectorConfig(
-                            type=selector.TextSelectorType.TEXT,
-                        ),
+                    vol.Required("inverter_model"): selector.TextSelector(
+                        selector.TextSelectorConfig(type=selector.TextSelectorType.TEXT),
                     ),
-                    vol.Required(CONF_PASSWORD): selector.TextSelector(
-                        selector.TextSelectorConfig(
-                            type=selector.TextSelectorType.PASSWORD,
-                        ),
+                    vol.Required("battery_model"): selector.TextSelector(
+                        selector.TextSelectorConfig(type=selector.TextSelectorType.TEXT),
+                    ),
+                    vol.Required("inverter_serial_number"): selector.TextSelector(
+                        selector.TextSelectorConfig(type=selector.TextSelectorType.TEXT),
+                    ),
+                    vol.Optional("gridboss_serial_number"): selector.TextSelector(
+                        selector.TextSelectorConfig(type=selector.TextSelectorType.TEXT),
+                    ),
+                    vol.Required("polling_interval", default=10): vol.All(
+                        vol.Coerce(int),
+                        vol.Range(min=5),
                     ),
                 },
             ),
@@ -87,7 +90,7 @@ class EG4FlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         )
         await client.async_get_data()
 
-    async def async_step_user(self, user_input=None):
+    async def async_step_setup(self, user_input=None):
         errors = {}
 
         if user_input is not None:
@@ -110,7 +113,7 @@ class EG4FlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         })
 
         return self.async_show_form(
-            step_id="user",
+            step_id="setup",
             data_schema=data_schema,
             errors=errors,
             description_placeholders={
