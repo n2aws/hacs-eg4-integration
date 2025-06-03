@@ -18,10 +18,14 @@
             "auth": "Ongeldige gebruikersnaam of wachtwoord.",
             "connection": "Kan geen verbinding maken met de EG4-hardware.",
             "unknown": "Er is een onbekende fout opgetreden.",
-            "modbus": "Fout bij het lezen van Modbus-gegevens."
+            "modbus": "Fout bij het lezen van Modbus-gegevens.",
+            "auto_discover_ip": "IP-adres automatisch ontdekken mislukt."
         },
         "abort": {
             "already_configured": "Deze hardware is al geconfigureerd."
+        },
+        "success": {
+            "auto_discover_ip": "IP-adres succesvol ontdekt."
         }
     }
 }

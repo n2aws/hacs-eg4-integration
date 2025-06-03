@@ -106,25 +106,55 @@ class EG4ApiClient:
         port: int = None,
         serial_port: str = None,
         baudrate: int = 9600,
+        serial_number: str = None,
     ):
         self.host = host
         self.port = port
         self.serial_port = serial_port
         self.baudrate = baudrate
+        self.serial_number = serial_number
         self.client = None
+
+    async def auto_discover_ip(self):
+        """Auto-discover the IP address using mDNS."""
+        if self.serial_number:
+            try:
+                # Use mDNS to discover devices on the network
+                mdns_query = f"EG4-{self.serial_number}.local"
+                discovered_ip = socket.gethostbyname(mdns_query)
+                self.host = discovered_ip
+                return discovered_ip
+            except socket.error as e:
+                raise ConnectionError(f"Failed to auto-discover IP: {e}")
+        raise ValueError("Serial number is required for IP auto-discovery.")
 
     async def connect(self):
         """Establish connection to EG4 hardware."""
-        if self.host and self.port:
-            self.client = AsyncModbusTcpClient(self.host, self.port)
-        elif self.serial_port:
+        if self.serial_port:
+            # Serial connection logic
             self.client = AsyncModbusSerialClient(
                 method="rtu", port=self.serial_port, baudrate=self.baudrate
             )
+        elif self.host:
+            # TCP/IP connection logic
+            self.client = AsyncModbusTcpClient(host=self.host, port=self.port)
+        elif self.serial_number:
+            # Attempt IP auto-discovery
+            await self.auto_discover_ip()
+            self.client = AsyncModbusTcpClient(host=self.host, port=self.port)
         else:
-            raise ValueError("Either TCP or serial connection parameters must be provided.")
+            raise ValueError("Either host or serial_port must be provided.")
 
-        await self.client.connect()
+        try:
+            await self.client.connect()
+        except ConnectionError:
+            # Retry IP auto-discovery if connection fails
+            if self.serial_number:
+                await self.auto_discover_ip()
+                self.client = AsyncModbusTcpClient(host=self.host, port=self.port)
+                await self.client.connect()
+            else:
+                raise
 
     async def read_data(self, address: int, count: int):
         """Read data from EG4 hardware."""

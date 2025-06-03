@@ -73,6 +73,7 @@ class EG4DataUpdateCoordinator(DataUpdateCoordinator):
             port=config_entry.data.get("port"),
             serial_port=config_entry.data.get("serial_port"),
             baudrate=config_entry.data.get("baudrate", 9600),
+            serial_number=config_entry.data.get("inverter_serial_number"),
         )
 
     async def _async_update_data(self):

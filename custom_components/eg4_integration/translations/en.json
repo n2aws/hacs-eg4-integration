@@ -18,10 +18,14 @@
             "auth": "Invalid username or password.",
             "connection": "Unable to connect to the EG4 hardware.",
             "unknown": "An unknown error occurred.",
-            "modbus": "Error reading Modbus data."
+            "modbus": "Error reading Modbus data.",
+            "auto_discover_ip": "Failed to auto-discover IP address."
         },
         "abort": {
             "already_configured": "This hardware is already configured."
+        },
+        "success": {
+            "auto_discover_ip": "Successfully discovered IP address."
         }
     }
 }

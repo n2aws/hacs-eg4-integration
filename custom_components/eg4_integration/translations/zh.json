@@ -18,10 +18,14 @@
             "auth": "用户名或密码无效。",
             "connection": "无法连接到EG4硬件。",
             "unknown": "发生未知错误。",
-            "modbus": "读取Modbus数据时出错。"
+            "modbus": "读取Modbus数据时出错。",
+            "auto_discover_ip": "自动发现IP地址失败。"
         },
         "abort": {
             "already_configured": "此硬件已配置。"
+        },
+        "success": {
+            "auto_discover_ip": "成功发现IP地址。"
         }
     }
 }

@@ -18,10 +18,14 @@
             "auth": "Geçersiz kullanıcı adı veya şifre.",
             "connection": "EG4 donanımına bağlanılamıyor.",
             "unknown": "Bilinmeyen bir hata oluştu.",
-            "modbus": "Modbus verilerini okurken hata oluştu."
+            "modbus": "Modbus verilerini okurken hata oluştu.",
+            "auto_discover_ip": "IP adresi otomatik olarak keşfedilemedi."
         },
         "abort": {
             "already_configured": "Bu donanım zaten yapılandırılmış."
+        },
+        "success": {
+            "auto_discover_ip": "IP adresi başarıyla keşfedildi."
         }
     }
 }

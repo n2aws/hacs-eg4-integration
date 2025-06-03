@@ -31,3 +31,15 @@ async def test_invalid_connection():
     client = EG4ApiClient()
     with pytest.raises(ValueError):
         await client.connect()
+
+@pytest.mark.asyncio
+async def test_auto_discover_ip():
+    client = EG4ApiClient(serial_number="123456789")
+    discovered_ip = await client.auto_discover_ip()
+    assert discovered_ip == "192.168.1.89", "IP discovery failed for serial number 123456789"
+
+@pytest.mark.asyncio
+async def test_auto_discover_ip_no_serial():
+    client = EG4ApiClient()
+    with pytest.raises(ValueError):
+        await client.auto_discover_ip()

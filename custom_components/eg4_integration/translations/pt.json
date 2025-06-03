@@ -18,10 +18,14 @@
             "auth": "Nome de usuário ou senha inválidos.",
             "connection": "Não foi possível conectar ao hardware EG4.",
             "unknown": "Ocorreu um erro desconhecido.",
-            "modbus": "Erro ao ler os dados do Modbus."
+            "modbus": "Erro ao ler os dados do Modbus.",
+            "auto_discover_ip": "Falha ao descobrir o endereço IP automaticamente."
         },
         "abort": {
             "already_configured": "Este hardware já está configurado."
+        },
+        "success": {
+            "auto_discover_ip": "Endereço IP descoberto com sucesso."
         }
     }
 }

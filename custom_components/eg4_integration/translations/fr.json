@@ -18,10 +18,14 @@
             "auth": "Nom d'utilisateur ou mot de passe invalide.",
             "connection": "Impossible de se connecter au matériel EG4.",
             "unknown": "Une erreur inconnue s'est produite.",
-            "modbus": "Erreur de lecture des données Modbus."
+            "modbus": "Erreur de lecture des données Modbus.",
+            "auto_discover_ip": "Échec de la découverte de l'adresse IP."
         },
         "abort": {
             "already_configured": "Ce matériel est déjà configuré."
+        },
+        "success": {
+            "auto_discover_ip": "Adresse IP découverte avec succès."
         }
     }
 }
