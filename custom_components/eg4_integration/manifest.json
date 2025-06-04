@@ -1,5 +1,5 @@
 {
-  "domain": "EG4",
+  "domain": "eg4_integration",
   "name": "EG4 Integration",
   "codeowners": [
     "@n2aws"
